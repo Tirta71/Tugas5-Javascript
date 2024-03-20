@@ -1,0 +1,100 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f0f0f0;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  gap: 2rem;
+}
+
+#kotak,
+.gambar-srigala {
+  cursor: pointer;
+  position: relative;
+}
+
+#kotak {
+  width: 150px;
+  height: 150px;
+  background-color: #ff4500;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease;
+}
+
+.gambar-srigala img,
+.gambar-sapi img,
+.gambar-anjing img {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease;
+  cursor: pointer;
+}
+
+/* Hover effect */
+#kotak:hover,
+.gambar-srigala img:hover,
+.gambar-anjing img:hover,
+.gambar-sapi img:hover {
+  transform: scale(1.05);
+}
+
+/* Button styling */
+.fadeout,
+.fadein,
+.fadeto3 {
+  padding: 10px 20px;
+  margin: 5px;
+  background-color: #007bff;
+  border: none;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.fadeout:hover,
+.fadein:hover,
+.fadeto3:hover {
+  background-color: #0056b3;
+}
+
+/* Custom animations */
+@keyframes slideOut {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+}
+
+@keyframes slideIn {
+  0% {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+@keyframes rotateFade {
+  0% {
+    transform: rotate(0) scale(1);
+    opacity: 1;
+  }
+  100% {
+    transform: rotate(360deg) scale(0.5);
+    opacity: 0;
+  }
+}
